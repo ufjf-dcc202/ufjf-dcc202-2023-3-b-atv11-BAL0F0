@@ -1,14 +1,21 @@
+import{ getLista } from"./src/lista";
 const pEntrada=document.querySelector("#entrada");
 const btnAdicionar=document.querySelector("#adicionar");
 const btnLimpar=document.querySelector("#limpar");
 const olItens=document.querySelector("#itens");
 
+atualizarListaOrdenada();
 
-adicionaElementoNaLitsa("Primeiro");
-adicionaElementoNaLitsa("Segundo");
-adicionaElementoNaLitsa("Terceiro");
+function atualizarListaOrdenada(){
+const lista=getLista();
+    for(let i=0;i< lista.length;i++){
+        adicionaElementoNaListaOrdenada(lista[i]);
+    }
+}
+    
 
-function adicionaElementoNaLitsa(texto){
+
+function adicionaElementoNaListaOrdenada(texto){
 
     const li=document.createElement("li");
     li.textContent=texto;
