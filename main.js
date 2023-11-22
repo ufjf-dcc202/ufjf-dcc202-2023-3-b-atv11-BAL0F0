@@ -3,14 +3,15 @@ const btnAdicionar=docment.querySelector("#adicionar");
 const btnLimpar=docment.querySelector("#limpar");
 const olItens=docment.querySelector("#itens");
 
-const li=docment.createElement("li");
-li.textContent="Primeiro";
-olItens.appendChild(li);
 
-const li2=docment.createElement("li");
-li2.textContent="Segundo";
-olItens.appendChild(li2);
+adicionaElementoNaLitsa("Primeiro");
+adicionaElementoNaLitsa("Segundo");
+adicionaElementoNaLitsa("Terceiro");
 
-const li3=docment.createElement("li");
-li3.textContent="Terceiro";
-olItens.appendChild(li3);
+function adicionaElementoNaLitsa(texto){
+
+    const li=docment.createElement("li");
+    li.textContent=texto;
+    olItens.appendChild(li);
+}
+
