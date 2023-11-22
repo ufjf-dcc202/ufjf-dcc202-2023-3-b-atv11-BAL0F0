@@ -6,6 +6,12 @@ const olItens=document.querySelector("#itens");
 
 atualizarListaOrdenada();
 btnAdicionar=addEventListener("click",adicionaItemDeEntrada); 
+btnLimpar.addEventListener("click",limpaListaOrdenada);
+
+function limpaListaOrdenada(){
+    limpaLista();
+    atualizarListaOrdenada();
+}
 
 function adicionaItemDeEntrada(){
     const valor=pEntrada.textContent;
