@@ -1,13 +1,22 @@
-import{ getLista } from"./src/lista";
+import{ getLista } from"./src/lista.js";
 const pEntrada=document.querySelector("#entrada");
 const btnAdicionar=document.querySelector("#adicionar");
 const btnLimpar=document.querySelector("#limpar");
 const olItens=document.querySelector("#itens");
 
 atualizarListaOrdenada();
+btnAdicionar=addEventListener("click",adicionaItemDeEntrada); 
+
+function adicionaItemDeEntrada(){
+    const valor=pEntrada.textContent;
+    adicionaNaLista(valor);
+    pEntrada.textContent = "";
+    atualizarListaOrdenada();
+}
 
 function atualizarListaOrdenada(){
 const lista=getLista();
+olItens.innerHTML="";
     for(let i=0;i< lista.length;i++){
         adicionaElementoNaListaOrdenada(lista[i]);
     }
